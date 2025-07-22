@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List - Mantenimiento</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #4EF56E, #4ED4F5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      animation: aparecer 1s ease;
+    }
+
+    .card h1 {
+      font-size: 2.2rem;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #444;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .input-group input {
+      padding: 10px;
+      border: 2px solid #4EF56E;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #4EF5A7;
+    }
+
+    .input-group button {
+      padding: 10px;
+      background-color: #4EF56E;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .input-group button:hover {
+      background-color: #3ecf5c;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="Trabajando" class="logo">
+      <h1>Todo List</h1>
+      <p>Estamos trabajando en algo increíble para ti.<br>Muy pronto estará disponible.</p>
+      <div class="input-group">
+        <input type="email" placeholder="Ingresa tu correo para notificarte" />
+        <button>Notificarme</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
