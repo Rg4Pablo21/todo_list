@@ -1,0 +1,45 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr 20rem auto;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid black;
+}
+
+.div-tareas {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 0.5rem;
+
+    padding:1rem;
+    border-radius: 8px;
+
+}
+
+
+.div-logo{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.texto{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.numero{
+    border: 2px solid black;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+.logo-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
