@@ -14,7 +14,7 @@ export function footer() {
     enlace.className = "footer-github";
     enlace.href = "https://github.com/Rg4Pablo21/todo_list.git";
     enlace.innerText = "GitHub";
-    enlace.target = "_blank"; 
+    enlace.target = "_blank";
     divContenido.appendChild(enlace);
 
     footer.appendChild(divContenido);

@@ -3,11 +3,11 @@ import { footer } from "../components/footer/footerComponent.js";
 import { tareas } from "../components/tareas/tareasComponent.js";
 import { informaciones } from "../components/informacion/informacionComponent.js";
 
-export function dashboard(){
+export function dashboard() {
     let dashboard = document.createElement('section');
     dashboard.className = "dashboard";
 
-    // Header 
+    // Header
     dashboard.appendChild(header());
 
     // Contenedor para las dos secciones
