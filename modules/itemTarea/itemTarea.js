@@ -17,7 +17,7 @@ export function tarea(indice, titulo, estado, fechaAs, fechaEn, listaIntegrantes
 
     // Estado de la tarea
     let divEstado = document.createElement('div');
-    divEstado.className = `tarea-estado ${estado.toLowerCase()}`; // ejemplo: completado, pendiente, etc.
+    divEstado.className = `tarea-estado ${estado.toLowerCase()}`;
     divEstado.textContent = estado;
     div.appendChild(divEstado);
 
@@ -39,7 +39,7 @@ export function tarea(indice, titulo, estado, fechaAs, fechaEn, listaIntegrantes
     listaIntegrantes.forEach(integrante => {
         let imgIntegrante = document.createElement('div');
         imgIntegrante.className = "integrante-icono";
-        imgIntegrante.textContent = integrante; // puedes reemplazar por <img> si son imágenes
+        imgIntegrante.textContent = integrante; 
         divIntegrantes.appendChild(imgIntegrante);
     });
     div.appendChild(divIntegrantes);
@@ -47,7 +47,7 @@ export function tarea(indice, titulo, estado, fechaAs, fechaEn, listaIntegrantes
     // Botón eliminar
     let btnEliminar = document.createElement('div');
     btnEliminar.className = "tarea-eliminar";
-    btnEliminar.innerHTML = "❌";
+    btnEliminar.innerHTML = "🗑️";
     div.appendChild(btnEliminar);
 
     return div;
