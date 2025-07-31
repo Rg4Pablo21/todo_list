@@ -1,0 +1,29 @@
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-github {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-github:hover {
+    color: #4ED4F5;
+}

@@ -6,7 +6,7 @@ header{
     border: 1px solid black;
 }
 
-.div-tareas {
+.div-tarea {
     display: flex;
     justify-content: flex-start; 
     align-items: center;
