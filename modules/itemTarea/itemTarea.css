@@ -89,3 +89,21 @@
 .tarea .tarea-eliminar:hover {
     transform: scale(1.1);
 }
+
+@media  (max-width: 700px) {
+    .tarea {
+        grid-template-columns: auto;
+ 
+    }
+    /* Fechas */
+    .tarea .tarea-fecha-asignacion,
+    .tarea .tarea-fecha-entrega {
+    
+        text-align: start;
+    }
+    .tarea .tarea-integrantes {
+       justify-content:start;
+    }
+
+}
+  

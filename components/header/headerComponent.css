@@ -43,3 +43,10 @@ header{
     border-radius: 50%;
 }
 
+@media (max-width: 700px) {
+    header{
+        grid-template-columns:1fr auto auto;
+        
+    }
+    
+}
