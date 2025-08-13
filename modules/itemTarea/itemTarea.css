@@ -2,7 +2,6 @@
 .tarea {
     display: grid;
     grid-template-columns: 3rem 1fr auto auto auto auto auto;
-    grid-template-columns: repeat(7,1fr);
     align-items: center;
     gap: 1rem;
     padding: 0.5rem 1rem;
@@ -12,61 +11,60 @@
     margin-bottom: 0.5rem;
     font-family: sans-serif;
     font-size: 0.9rem;
-}
-
-/* Número */
-.tarea .div-numero {
+  }
+  
+  /* Anti-desborde (no cambia la lógica, solo protege el grid) */
+  .tarea > * { min-width: 0; }
+  .tarea .tarea-titulo { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tarea .tarea-integrantes { flex-wrap: wrap; }
+  
+  /* Número */
+  .tarea .div-numero {
     background: #f5f5f5;
     border: 1px solid #ccc;
     text-align: center;
     border-radius: 4px;
     font-weight: bold;
     padding: 0.3rem 0;
-}
-
-/* Título */
-.tarea .tarea-titulo {
+  }
+  
+  /* Título */
+  .tarea .tarea-titulo {
     margin: 0;
     font-weight: 500;
     font-size: 1rem;
-}
-
-/* Estado */
-.tarea .tarea-estado {
+  }
+  
+  /* Estado */
+  .tarea .tarea-estado {
     text-align: center;
     padding: 0.3rem 0.6rem;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: bold;
     color: #fff;
-}
-
-/* Colores de estado */
-.tarea-estado.completado {
-    background: #77e39f;
-}
-.tarea-estado.pendiente {
-    background: #f59e4e;
-}
-.tarea-estado.en {
-    background: #4ed4f5;
-}
-
-/* Fechas */
-.tarea .tarea-fecha-asignacion,
-.tarea .tarea-fecha-entrega {
+  }
+  
+  /* Colores de estado */
+  .tarea-estado.completado { background: #77e39f; }
+  .tarea-estado.pendiente  { background: #f59e4e; }
+  .tarea-estado.en         { background: #4ed4f5; }
+  
+  /* Fechas */
+  .tarea .tarea-fecha-asignacion,
+  .tarea .tarea-fecha-entrega {
     font-size: 0.8rem;
     color: #555;
     text-align: center;
-}
-
-/* Integrantes */
-.tarea .tarea-integrantes {
+  }
+  
+  /* Integrantes */
+  .tarea .tarea-integrantes {
     display: flex;
     gap: 0.3rem;
     justify-content: center;
-}
-.tarea .integrante-icono {
+  }
+  .tarea .integrante-icono {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -76,34 +74,25 @@
     justify-content: center;
     font-size: 1rem;
     border: 1px solid #ccc;
-}
-
-/* Botón eliminar */
-.tarea .tarea-eliminar {
+  }
+  
+  /* Botón eliminar */
+  .tarea .tarea-eliminar {
     cursor: pointer;
     font-size: 1.2rem;
     color: #d9534f;
     text-align: center;
     transition: 0.2s;
-}
-.tarea .tarea-eliminar:hover {
-    transform: scale(1.1);
-}
-
-@media  (max-width: 700px) {
-    .tarea {
-        grid-template-columns: auto;
- 
-    }
-    /* Fechas */
+  }
+  .tarea .tarea-eliminar:hover { transform: scale(1.1); }
+  
+  /* Móvil (hasta 767px) – mismo comportamiento que tenías */
+  @media (max-width: 767px) {
+    .tarea { grid-template-columns: 1fr; }
+  
     .tarea .tarea-fecha-asignacion,
-    .tarea .tarea-fecha-entrega {
-    
-        text-align: start;
-    }
-    .tarea .tarea-integrantes {
-       justify-content:start;
-    }
-
-}
+    .tarea .tarea-fecha-entrega { text-align: start; }
+  
+    .tarea .tarea-integrantes { justify-content: start; }
+  }
   

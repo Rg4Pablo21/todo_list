@@ -1,52 +1,88 @@
-header{
+.dashboard{
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    gap: 1rem;
+    min-height: 100vh; 
+  }
+  
+  .contenedor-secciones {
+    display: grid;
+    gap: rem;
+  }
+  
+  /* Teléfonos y phablets */
+  @media (max-width: 767px) {
+    .contenedor-secciones { grid-template-columns: 1fr; }
+  }
+  
+  /* Tablets (768px a 991px) – lo dejas como tenías, sin forzar nada */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos para tablets si los necesitas */
+  }
+  
+  /* Pantallas medianas (992px a 1199px) – dos columnas como en tu mock */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .contenedor-secciones { grid-template-columns: 1fr 0.9fr; }
+  }
+  
+  /* Escritorios grandes (>=1200px) – mantén dos columnas */
+  @media (min-width: 1200px) {
+    .contenedor-secciones { grid-template-columns: 1fr 0.9fr; }
+  }
+  
+  /* Ultra grandes (>=1600px) – si quieres un poco más de aire */
+  @media (min-width: 1600px) {
+    .contenedor-secciones { grid-template-columns: 1.1fr 0.9fr; }
+  }
+  
+  /* Header */
+  header{
     display: grid;
     grid-template-columns: 1fr 20rem auto;
     align-items: center;
     gap: 1rem;
     border: 1px solid black;
-}
-
-.div-tarea {
+  }
+  
+  /* En móvil lo dejas como ya tenías, solo subimos a 767px para cerrar hueco */
+  @media (max-width: 767px) {
+    header { grid-template-columns: 1fr auto auto; }
+  }
+  
+  /* Opcional: si ves desbordes cerca de 800–900px, haz la segunda columna flexible */
+  @media (min-width: 768px) {
+    header { grid-template-columns: 1fr minmax(12rem, 20rem) auto; }
+  }
+  
+  .div-tarea {
     display: flex;
     justify-content: flex-start; 
     align-items: center;
     gap: 0.5rem;
-
     padding:1rem;
     border-radius: 8px;
-
-}
-
-
-.div-logo{
+  }
+  
+  .div-logo{
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
     border: 1px solid black;
-}
-
-.texto{
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.numero{
+  }
+  
+  .texto{ font-size: 2rem; font-weight: bold; }
+  
+  .numero{
     border: 2px solid black;
     padding: 0.2rem 0.5rem;
     border-radius: 10px;
     font-size: 2rem;
-}
-.logo-img{
+  }
+  
+  .logo-img{
     width: 100%;
     height: 100%;
     object-fit: cover; 
     border-radius: 50%;
-}
-
-@media (max-width: 700px) {
-    header{
-        grid-template-columns:1fr auto auto;
-        
-    }
-    
-}
+  }
+  
